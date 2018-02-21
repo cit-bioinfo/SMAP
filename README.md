@@ -22,24 +22,24 @@ These are the few steps to run a complete SMAP pipeline, from genome file downlo
 <a name="install"></a>
 
 
-The SMAP R package can be installed by downloading/cloning [the repository](https://github.com/RemyNicolle/SMAP) and using `R CMD INSTALL` or directly from R using the devtools package: 
+The SMAP R package can be installed by downloading/cloning [the repository](https://github.com/cit-bioinfo/SMAP) and using `R CMD INSTALL` or directly from R using the devtools package: 
 ```R
 # If not already installed, install the devtools package
 install.packages("devtools")
 
 library(devtools)
-install_github("RemyNicolle/SMAP")
+install_github("cit-bioinfo/SMAP")
 ```
 
 The SMAP pipeline requires two additional scripts. These are included in the downloaded/cloned repository. They can also be downloaded seperately:
-- A shell script to prepare the genomes and transcriptomes of reference: [SMAP_prepareReference.sh](https://raw.githubusercontent.com/RemyNicolle/SMAP/master/SMAP_prepareReference.sh)
-- A python script to seperate the BAM file of aligned reads based on their predicted specie of origin: [smap_splitBySpecie_standard.py](https://raw.githubusercontent.com/RemyNicolle/SMAP/master/smap_splitBySpecie_standard.py)
+- A shell script to prepare the genomes and transcriptomes of reference: [SMAP_prepareReference.sh](https://raw.githubusercontent.com/cit-bioinfo/SMAP/master/SMAP_prepareReference.sh)
+- A python script to seperate the BAM file of aligned reads based on their predicted specie of origin: [smap_splitBySpecie_standard.py](https://raw.githubusercontent.com/cit-bioinfo/SMAP/master/smap_splitBySpecie_standard.py)
 
 
 To download these scripts seperately:
 ```shell
-wget https://raw.githubusercontent.com/RemyNicolle/SMAP/master/SMAP_prepareReference.sh
-wget https://raw.githubusercontent.com/RemyNicolle/SMAP/master/smap_splitBySpecie_standard.py
+wget https://raw.githubusercontent.com/cit-bioinfo/SMAP/master/SMAP_prepareReference.sh
+wget https://raw.githubusercontent.com/cit-bioinfo/SMAP/master/smap_splitBySpecie_standard.py
 ```
 
 __Requirements__ The BAM file seperation `smap_splitBySpecie_standard.py` script (which is not required for gene quantification) requires the `pysam` python module. 
