@@ -87,9 +87,9 @@ if [ ! -e "$sg" ]; then printf "Stromal genome file does not exists  (Option -m)
 if [ ! -e "$st" ]; then printf "Stromal transcriptome file does not exists  (Option -s) \n" "$usage";exit ;fi
 
 
-if [[ ! -e $output ]]; then
+if [ ! -e $output ]; then
 mkdir $output
-elif [[ ! -d $output ]]; then
+elif [ ! -d $output ]; then
 echo "$dir already exists but is not a directory" 1>&2
 exit
 fi
