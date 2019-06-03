@@ -556,7 +556,7 @@ def main(debug):
     # step 1 sorting
 
     log=keepingTrack("Step 1 : sorting","Lexicographically sorting the input BAM",log,verbose)
-    pysam.sort("-n", inputfile,sortedbamname)
+    pysam.sort("-n","-T","./tmp", inputfile,"-o",sortedbamname)
     print sortedbamfil
     verifyBam(sortedbamfil,"Sorted BAM")
     log=keepingTrack("Step 1 : sorting","Sorting done",log,verbose)
